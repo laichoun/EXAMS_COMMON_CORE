@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: laichoun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 09:20:45 by laichoun          #+#    #+#             */
-/*   Updated: 2024/04/17 09:25:04 by laichoun         ###   ########.fr       */
+/*   Created: 2024/04/26 13:32:20 by laichoun          #+#    #+#             */
+/*   Updated: 2024/04/26 13:37:14 by laichoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,11 @@ int	is_power_of_2(unsigned int n)
 		else
 			i = i * 2;
 	}
-		return (0);
+	return (0);
 }
 
 int	main(void)
 {
-	printf("%d", is_power_of_2(16));
+	printf("%d", is_power_of_2(11));
 }
+
