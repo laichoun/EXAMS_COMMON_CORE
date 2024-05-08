@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: laichoun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 08:51:06 by laichoun          #+#    #+#             */
-/*   Updated: 2024/04/16 09:19:35 by laichoun         ###   ########.fr       */
+/*   Created: 2024/04/26 11:46:54 by laichoun          #+#    #+#             */
+/*   Updated: 2024/04/26 11:53:54 by laichoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ int	ft_atoi(const char *str)
 	int	sign;
 	int	result;
 
-	sign = 1;
 	i = 0;
+	sign = 1;
 	result = 0;
 	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
 		i ++;
@@ -31,17 +31,17 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] && (str[i] >= 48 && str[i] <= 57))
 	{
-		result = result * 10 + str[i] - 48;
+		result = (result * 10) + str[i] - 48;
 		i ++;
 	}
-	return (result * sign);
+	return (sign * result);
 }
 
 int	main(void)
 {
-	char	str[100] = "                  \t\n\r-17081996dfdf";
+	char	str[100] = "     \t\rq17081996sasas18";
 	int		result;
 
 	result = ft_atoi(str);
-	printf("Mon entier est %d", result);
+	printf("%d", result);
 }
