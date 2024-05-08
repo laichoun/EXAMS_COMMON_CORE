@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: laichoun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 08:02:15 by laichoun          #+#    #+#             */
-/*   Updated: 2024/04/16 08:22:38 by laichoun         ###   ########.fr       */
+/*   Created: 2024/04/25 15:15:01 by laichoun          #+#    #+#             */
+/*   Updated: 2024/04/25 15:20:01 by laichoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,13 @@ int	main(int argc, char **argv)
 	{
 		while (argv[1][i])
 		{
-			if (argv[1][i] >= 65 && argv[1][i] <= 90)
+			if (argv[1][i] >= 65 && argv [1][i] <= 90)
 				argv[1][i] = 90 - argv[1][i] + 65;
-			else if (argv[1][i] >= 97 && argv[1][i] <= 122)
+			else if (argv[1][i] >= 97 && argv [1][i] <= 122)
 				argv[1][i] = 122 - argv[1][i] + 97;
 			write(1, &argv[1][i], 1);
 			i ++;
 		}
 	}
-	write(1, "\n", 1);
-	return (0);
+	write(1, "\n", 1); 
 }
