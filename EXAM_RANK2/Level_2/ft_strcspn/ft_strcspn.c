@@ -5,17 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: laichoun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 09:38:32 by laichoun          #+#    #+#             */
-/*   Updated: 2024/04/16 10:30:44 by laichoun         ###   ########.fr       */
+/*   Created: 2024/04/26 12:14:13 by laichoun          #+#    #+#             */
+/*   Updated: 2024/04/26 12:29:26 by laichoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <string.h>
 
 size_t	ft_strcspn(const char *s, const char *reject)
 {
-	size_t	i; // pour s
-	size_t	j; // pour reject
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	while (s[i])
@@ -32,13 +33,13 @@ size_t	ft_strcspn(const char *s, const char *reject)
 	return (i);
 }
 
+#include <stdio.h>
+
 int	main(void)
 {
-	char	s[100] = "Hsma";
-	char	reject[100] = "Chat";
-	size_t	result;
+	char	s[100] = "Asma";
+	char	reject[100] = "CousCCm";
 
-	result = ft_strcspn(s, reject);
-	printf("%ld", result);
-
+	printf("%ld\n", ft_strcspn(s, reject));
+	printf("%ld\n", strcspn(s, reject));
 }
