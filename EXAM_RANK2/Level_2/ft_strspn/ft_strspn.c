@@ -5,32 +5,38 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: laichoun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 11:28:34 by laichoun          #+#    #+#             */
-/*   Updated: 2024/04/16 11:52:41 by laichoun         ###   ########.fr       */
+/*   Created: 2024/04/26 12:59:02 by laichoun          #+#    #+#             */
+/*   Updated: 2024/04/26 13:14:16 by laichoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <string.h>
+
+char	*ft_strchr(const char *s, int c)
+{
+	int	i;
+
+	i = 0;
+	while (s)
+	{
+		if (s[i] == c)
+			return ((char *)s);
+		i ++;
+	}
+	return (0);
+
+}
 
 size_t	ft_strspn(const char *s, const char *accept)
 {
 	int	i;
-	int	j;
-	int	check;
 
 	i = 0;
 	while (s[i])
 	{
-		j = 0;
-		check = 0;
-		while (accept[j])
-		{
-			if (s[i] == accept[j])
-				check = 1;
-			j ++;
-		}
-		if (check == 0)
-			return (i);
+		if (ft_strchr(accept, s[i]) == 0)
+			break;
 		i ++;
 	}
 	return (i);
@@ -40,41 +46,7 @@ size_t	ft_strspn(const char *s, const char *accept)
 int main()
 {
 	char *s = "hello";
-	const char *accept = "jfkhpell";
+	const char *accept = "couchello";
 	printf("%zu\n", ft_strspn(s, accept));
+	printf("%zu\n", strspn(s, accept));
 }
-
-/*
-#include <stdlib.h>
-
-size_t	ft_strspn(const char *s, const char *accept)
-{
-	int i;
-	int	j;
-	int check;
-
-	i = 0;
-	while (s[i])
-	{
-		j = 0;
-		check = 0;
-		while (accept[j])
-		{
-			if (s[i] == accept[j])
-				check = 1;
-			j++;
-		}
-		if (check == 0)
-			return (i);
-		i++;
-	}
-	return (i);
-}
-
-#include <stdio.h>
-int main()
-{
-	char *s = "hello";
-	const char *accept = "jfkhpell";
-	printf("%zu\n", ft_strspn(s, accept));
-}*/
