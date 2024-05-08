@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: laichoun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 14:39:21 by laichoun          #+#    #+#             */
-/*   Updated: 2024/04/16 14:46:46 by laichoun         ###   ########.fr       */
+/*   Created: 2024/04/26 12:51:21 by laichoun          #+#    #+#             */
+/*   Updated: 2024/04/26 12:56:10 by laichoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strrev(char *str)
 {
-	int	i;
-	int	len;
+	int		i;
+	int		len;
 	char	tmp;
 
 	i = 0;
@@ -23,21 +23,21 @@ char	*ft_strrev(char *str)
 	while (str[len])
 		len ++;
 	len --;
-	while (i < len)
+	while (len > i)
 	{
 		tmp = str[i];
 		str[i] = str[len];
 		str[len] = tmp;
-		i ++;
 		len --;
+		i ++;
 	}
 	return (str);
 }
 
 int	main(void)
 {
-	char s[100] = "Hello World";
-	ft_strrev(s);
-	printf("%s\n", s);
-	return (0);
+	char	str[100] = "Asma";
+
+	ft_strrev(str);
+	printf("%s", str);
 }
