@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: laichoun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 09:20:39 by laichoun          #+#    #+#             */
-/*   Updated: 2024/04/16 09:33:06 by laichoun         ###   ########.fr       */
+/*   Created: 2024/04/26 12:00:28 by laichoun          #+#    #+#             */
+/*   Updated: 2024/04/26 12:08:18 by laichoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,16 @@ int	ft_strcmp(char *s1, char *s2)
 
 int	main(void)
 {
-	int		result;
-	char	s1[100] = "Asma";
-	char	s2[100] = "Chama";
+	char	s1[100] = "Asmal";
+	char	s2[100] = "Asmaa";
+	int	result;
 
 	result = ft_strcmp(s1, s2);
-	if (result > 0)
-		printf("S1 vient après S2");
-	else if (result == 0)
-		printf("Same string");
-	else
-		printf("S1 vient avant S2");
+	if (result == 0)
+		printf("Même chaine de caractère");
+	else if (result < 0)
+		printf("s1 est avant s2");
+	else if (result > 0)
+		printf("s1 après s2");
 	return (0);
 }
