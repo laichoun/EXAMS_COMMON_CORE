@@ -5,23 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: laichoun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 14:51:13 by laichoun          #+#    #+#             */
-/*   Updated: 2024/04/16 16:13:39 by laichoun         ###   ########.fr       */
+/*   Created: 2024/04/26 13:19:46 by laichoun          #+#    #+#             */
+/*   Updated: 2024/04/26 13:30:57 by laichoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	check_doubles(char *str, char c, int pos)
+int	check_doubles(char *s, char c, int pos)
 {
 	int	i;
 
 	i = 0;
-	while (i < pos)
+	while (pos > i)
 	{
-		if (str[i] == c)
+		if (s[i] == c)
 			return (0);
-		i ++;
+		i++;
 	}
 	return (1);
 }
