@@ -5,12 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: laichoun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 13:58:46 by laichoun          #+#    #+#             */
-/*   Updated: 2024/04/16 14:23:35 by laichoun         ###   ########.fr       */
+/*   Created: 2024/04/26 12:40:18 by laichoun          #+#    #+#             */
+/*   Updated: 2024/04/26 12:49:55 by laichoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <string.h>
 
 char	*ft_strpbrk(const char *s1, const char *s2)
 {
@@ -31,9 +32,6 @@ char	*ft_strpbrk(const char *s1, const char *s2)
 	}
 	return (NULL);
 }
-
-#include <stdio.h>
-#include <string.h>
 
 int	main(void)
 {
