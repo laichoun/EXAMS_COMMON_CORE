@@ -37,7 +37,8 @@ int	main(int argc, char **argv)
 	int	n2;
 	int	pgcd;
 
-	i = 0;
+	i = 1;
+	pgcd = 0;
 	if (argc != 3)
 	{
 		printf("\n");
@@ -47,12 +48,14 @@ int	main(int argc, char **argv)
 	n2 = atoi(argv[2]);
 	if (n1 > 0 && n2 > 0)
 	{
-		while (i <= n1 / 2 && i <= n2 /2)
+		while (i <= (n1 / 2) && i <= (n2 /2))
 		{
 			if (n1 % i == 0 && n2 % i == 0)
 				pgcd = i;
 			i ++;
 		}
+		printf("%d", pgcd);
 	}
+	printf("\n");
 	return (0);
 }
